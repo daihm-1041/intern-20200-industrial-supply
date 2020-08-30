@@ -1,0 +1,16 @@
+@import 'bootstrap';
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: green;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 18px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
