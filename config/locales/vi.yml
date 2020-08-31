@@ -1,2 +1,8 @@
 vi:
-  hello: "xin chao"
+  hello: "Hello world"
+  title: "Industrial Supply"
+  static_page:
+    title: "Cung cap vat tu cong nghiep"
+  layouts:
+    header:
+      title: "Industrial Supply"
