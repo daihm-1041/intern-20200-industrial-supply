@@ -44,3 +44,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
 end
+
+group :development, :test do
+  gem "rspec-rails", "~> 4.0.1"
+end
