@@ -1,3 +1,4 @@
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 #logo {
@@ -7,7 +8,7 @@
   color: green;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 18px;
+  padding-top: 9px;
   font-weight: bold;
   &:hover {
     color: white;
