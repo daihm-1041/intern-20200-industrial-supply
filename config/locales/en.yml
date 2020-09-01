@@ -1,4 +1,5 @@
 en:
+  logo_content: "Industrial Supply"
   hello: "Hello world"
   title: "Industrial Supply"
   static_page:
@@ -6,3 +7,4 @@ en:
   layouts:
     header:
       title: "Industrial Supply"
+      logo_content: "Industrial Supply"
