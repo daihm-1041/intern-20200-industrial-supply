@@ -7,3 +7,10 @@ vi:
     header:
       title: "Industrial Supply"
       logo_content: "Industrial Supply"
+  users:
+    failt: "Thêm sản phẩm thất bại"
+    success: "Thêm user thành công"
+    create_my_account: "Tạo tài khoản"
+    sign_up: "Đăng kí"
+  shared:
+    error: "Lỗi khi nhập thông tin"
