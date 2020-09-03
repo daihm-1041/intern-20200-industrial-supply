@@ -1,0 +1,10 @@
+validate:
+  user:
+    max_length_name: 50
+    max_length_email: 255
+    max_length_address: 255
+    max_length_phone_number: 11
+    min_length_phone_number: 9
+    min_length_password: 5
+    validate_email_regex2: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    validate_phone_number_regex2: !ruby/regexp /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
