@@ -4,6 +4,8 @@ vi:
   static_page:
     title: "Cung cap vat tu cong nghiep"
   layouts:
+    application:
+      title: "Home page"
     header:
       title: "Industrial Supply"
       logo_content: "Industrial Supply"
@@ -14,3 +16,15 @@ vi:
     sign_up: "Đăng kí"
   shared:
     error: "Lỗi khi nhập thông tin"
+  sessions:
+    new:
+      signup: "Dang ki ngay !!"
+      login: "Dang nhap"
+      email: "email"
+      password: "Mat khau"
+      new_users: "Tao tai khoan"
+      remember_me: "Nho tai khoan"
+      remember: "gi nho dang nhap"
+      login_success: "Dang nhap thanh cong"
+      login_failt: "Dang nhap that bai, nhap lai email hoac mat khau"
+      logout: "Da dang xuat"
