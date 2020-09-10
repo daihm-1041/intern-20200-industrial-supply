@@ -1,0 +1,7 @@
+require('packs/admins/jquery-3.5.1.min')
+require('popper.js')
+require('turbolinks')
+require('bootstrap')
+require('packs/admins/bootstrap.bundle.min')
+require('packs/admins/scripts')
+require('packs/admins/select2.min.js')

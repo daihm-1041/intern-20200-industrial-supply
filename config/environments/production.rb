@@ -107,3 +107,10 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 end
+
+Rails.env = "production"
+Settings.reload_from_files(
+  Rails.root.join("config", "settings.yml").to_s,
+  Rails.root.join("config", "settings", "#{Rails.env}.yml").to_s,
+  Rails.root.join("config", "environments", "#{Rails.env}.yml").to_s
+)
