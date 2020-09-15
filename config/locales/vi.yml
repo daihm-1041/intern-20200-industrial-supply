@@ -28,3 +28,30 @@ vi:
       login_success: "Dang nhap thanh cong"
       login_failt: "Dang nhap that bai, nhap lai email hoac mat khau"
       logout: "Da dang xuat"
+  admins:
+    products:
+      form:
+        product_detail: Prouct Details
+        name: Name
+        category: Category
+        brand: Brand
+        price: Price
+        inventory_number: Inventory number
+        status: Status
+        description: Description
+        placeholder_name: Enter name
+        choose_category: Choose category
+        choose_brand: Choose brand
+        placeholder_price: Enter price
+        placeholder_inventory_number: Enter inventory number
+        placeholder_description: Enter description
+        images: Images
+        add_image: Add image
+      image_fields:
+        placeholder_image: Enter url of image
+        remove_image: Remove image
+      new:
+        create_product: Create product
+      create:
+        product_created_success: Product created success
+        product_create_failed: Create product fail

@@ -10,3 +10,9 @@ validate:
     validate_phone_number_regex2: !ruby/regexp /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
 products:
   number_page: 15
+admins:
+  products:
+    min_price: 1000
+    max_price: 1000000000
+    min_inventory: 1
+    max_inventory: 100000
