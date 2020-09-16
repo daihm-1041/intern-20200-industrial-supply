@@ -48,6 +48,7 @@ vi:
         placeholder_description: Enter description
         images: Images
         add_image: Add image
+        save: "save"
       image_fields:
         placeholder_image: Enter url of image
         remove_image: Remove image
@@ -56,3 +57,5 @@ vi:
       create:
         product_created_success: Product created success
         product_create_failed: Create product fail
+      destroy:
+        delete_success: "delete success!"

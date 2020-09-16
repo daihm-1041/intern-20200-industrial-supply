@@ -6,7 +6,7 @@
     <div class="col-sm-2">
       <%= f.label :name, t(".name"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <%= f.text_field :name, class: "form-control", placeholder: t(".placeholder_name") %>
     </div>
   </div>
@@ -14,7 +14,7 @@
     <div class="col-sm-2">
       <%= f.label :supplier, t(".supplier"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <%= f.select :supplier_id, options_from_collection_for_select(@suppliers, "id", "name", selected: @product.supplier_id), {include_blank: t(".choose_supplier")}, class: "form-control" %>
     </div>
   </div>
@@ -22,7 +22,7 @@
     <div class="col-sm-2">
       <%= f.label :category, t(".category"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name", selected: @product.category_id), {include_blank: t(".choose_category")}, class: "form-control" %>
     </div>
   </div>
@@ -30,7 +30,7 @@
     <div class="col-sm-2">
       <%= f.label :inventory_number, t(".inventory_number"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <%= f.number_field :inventory_number, class: "form-control", placeholder: t(".placeholder_inventory_number") %>
     </div>
   </div>
@@ -38,7 +38,7 @@
     <div class="col-sm-2">
       <%= f.label :price, t(".price"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-3">
       <%= f.number_field :price, class: "form-control", placeholder: t(".placeholder_price") %>
     </div>
   </div>
@@ -46,28 +46,28 @@
     <div class="col-sm-2">
       <%= f.label :description, t(".description"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
-      <%= f.text_area :description, class: "form-control", rows: "10", placeholder: t(".placeholder_description") %>
+    <div class="col-sm-6">
+      <%= f.text_area :description, class: "form-control", rows: "15", placeholder: t(".placeholder_description") %>
     </div>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
      <%= f.label :images, t(".images"), class: "col-sm-2 col-form-label"%>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <div class="images">
         <%= f.fields_for :images do |image| %>
-          <%= render "admins/products/image_fields", f: image %>
+          <%= render "image_fields", f: image %>
         <% end %>
         <div class="links">
           <%= link_to_add_association t(".add_image"), f, :images %>
         </div>
+        <div>
+          <div class="col d-flex justify-content-end">
+            <%= f.submit t(".save"), class: "btn btn-success"%>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col d-flex justify-content-end">
-      <button type="submit" class="btn btn-success"><%= t ".save" %></button>
     </div>
   </div>
   <br>
