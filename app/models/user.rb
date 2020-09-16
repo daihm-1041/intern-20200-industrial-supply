@@ -25,6 +25,8 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  enum role: {user: 0, admin: 1}, _prefix: true
+
   private
 
   def downcase_email

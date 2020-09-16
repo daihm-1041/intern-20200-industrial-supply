@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_29_094814) do
+ActiveRecord::Schema.define(version: 2020_09_16_100222) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.string "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "product_id", null: false
     t.bigint "user_id", null: false
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
@@ -84,7 +86,7 @@ ActiveRecord::Schema.define(version: 2020_08_29_094814) do
     t.string "remember_digest"
     t.string "address"
     t.string "phone_number"
-    t.integer "admin"
+    t.integer "role", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
