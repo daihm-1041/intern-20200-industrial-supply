@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     resources :users
     namespace :admins do
-      get "/dashboard", to: "dashboard#index"
+      root "dashboard#index"
+      resources :products
     end
   end
 end

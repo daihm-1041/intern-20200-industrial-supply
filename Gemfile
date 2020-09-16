@@ -5,6 +5,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.4.1"
+gem "cocoon"
 gem "config"
 gem "figaro"
 gem "image_processing", "1.9.3"
