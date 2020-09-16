@@ -1,0 +1,23 @@
+<div id="delete-product">
+  <tr id="row_<%= product.id %>">
+    <td><%= link_to product.name, admins_product_path(product) %></td>
+    <td><%= product.supplier_name %></td>
+    <td><%= product.category_name %></td>
+    <td><%= number_to_currency product.price %></td>
+    <td><%= product.inventory_number %></td>
+
+    <td class="project-actions text-left">
+      <%= link_to admins_product_path(product), class: "btn btn-primary btn-sm" do %>
+        <i class="fas fa-folder"></i> <%= t ".show" %>
+      <% end %>
+      <%= link_to edit_admins_product_path(product), class: "btn btn-info btn-sm" do %>
+        <i class="fas fa-pencil-alt"></i> <%= t ".edit" %>
+      <% end %>
+      <%= button_to admins_product_path(product),
+        method: :delete, data: {confirm: t("admins.delete_sure")}, remote: :true,
+          class: "destroy-product btn btn-danger btn-sm" do %>
+        <i class="fas fa-trash"></i> <%= t ".delete" %>
+      <% end %>
+    </td>
+  </tr>
+</div>

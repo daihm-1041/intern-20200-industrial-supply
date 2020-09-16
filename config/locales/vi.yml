@@ -29,6 +29,7 @@ vi:
       login_failt: "Dang nhap that bai, nhap lai email hoac mat khau"
       logout: "Da dang xuat"
   admins:
+    delete_sure: "are you sure?"
     products:
       form:
         product_detail: Prouct Details

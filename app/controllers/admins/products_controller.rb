@@ -17,6 +17,10 @@ class Admins::ProductsController < Admins::BaseController
     end
   end
 
+  def index
+    @products = Product.page(params[:page]).per Settings.products.number_page
+  end
+
   private
 
   def load_data

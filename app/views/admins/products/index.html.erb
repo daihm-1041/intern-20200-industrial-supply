@@ -1,0 +1,33 @@
+<main>
+  <div class="container-fluid">
+    <h1 class="mt-4"><%= t".list_products" %></h1>
+    <br>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <h6 class="text-left">
+            <span><%= t ".counts" %> : <%= @products.total_count %></span>
+          </h6>
+          <table class="table table-bordered" id="dataTable">
+            <thead>
+            <tr>
+              <th><%= t ".name" %></th>
+              <th><%= t ".supplier" %></th>
+              <th><%= t ".category" %></th>
+              <th><%= t ".price" %></th>
+              <th><%= t ".inventory_numble" %></th>
+              <th><%= t ".action" %></th>
+            </tr>
+            </thead>
+            <tbody id="products">
+              <%= render @products %>
+            </tbody>
+          </table>
+          <div id="paginator">
+            <%= paginate @products, remote: true, theme: "twitter-bootstrap-4" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
