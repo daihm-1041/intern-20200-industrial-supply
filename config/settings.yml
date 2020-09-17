@@ -16,3 +16,5 @@ admins:
     max_price: 1000000000
     min_inventory: 1
     max_inventory: 100000
+users:
+  checkbox_remember: "1"

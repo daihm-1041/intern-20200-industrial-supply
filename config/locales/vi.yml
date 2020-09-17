@@ -28,6 +28,7 @@ vi:
       login_success: "Dang nhap thanh cong"
       login_failt: "Dang nhap that bai, nhap lai email hoac mat khau"
       logout: "Da dang xuat"
+      remember: "luu dang nhap"
   admins:
     delete_sure: "are you sure?"
     products:
