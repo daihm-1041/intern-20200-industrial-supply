@@ -1,41 +1,169 @@
-<nav class="navbar navbar-fixed-top navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to t(".logo_content"), root_path, class: "navbar-brand" %>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <%= form_with url: "/search", method: "get", class: "navbar-form navbar-left" do %>
-        <%= text_field_tag :q, nil, class: "form-control" %>
-        <%= submit_tag nil, class: "btn btn-default" %>
-      <% end %>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".catergories"), "#" %></li>
-        <li><%= link_to t(".cart"), "#" %></li>
-        <% if logged_in? %>
-          <li><%= link_to t(".users"), "#" %></li>
-          <li class="dropdown">
-            <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
-              <%= t ".account" %><b class="caret"></b>
-            <% end %>
-            <ul class="dropdown-menu">
-              <li><%= link_to t(".profile"), "#" %></li>
-              <li><%= link_to t(".settings"), "#" %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to t(".logout"), logout_path, method: :delete %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t(".login"), login_path %></li>
+<!-- Humberger Begin -->
+<div class="humberger__menu__overlay"></div>
+<div class="humberger__menu__wrapper">
+  <div class="humberger__menu__logo">
+    <%= link_to root_path do %>
+      <%= image_tag("https://res.cloudinary.com/tdh/image/upload/v1595343877/images/logo_i3t2tp.png") %>
+    <% end %>
+  </div>
+  <div class="humberger__menu__cart">
+    <ul>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-heart"></i>
+          <span>1</span>
         <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-shopping-bag"></i>
+          <span class="length-cart">
+            <%= session[:cart].length if session[:cart]%>
+          </span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+  <div class="humberger__menu__widget">
+    <div class="header__top__right__language">
+      <%= image_tag(Settings.language_image, class: "") %>
+      <div><%= I18n.locale %></div>
+      <span class="arrow_carrot-down"></span>
+      <ul>
+        <li><%= link_to t("layouts._header.vietnamese"), locale: "vi" %></li>
+        <li><%= link_to t("layouts._header.english"), locale: "en" %></li>
       </ul>
     </div>
+    <div class="header__top__right__auth">
+      <% if logged_in? %>
+        <li class="dropdown li-none">
+          <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+            <%= current_user.name %>
+            <b class="caret"></b>
+          <% end %>
+          <ul class="dropdown-menu">
+            <li class="divider"></li>
+            <%= link_to t("layouts._header.logout"), logout_path, method: :delete %>
+            <li class="divider"></li>
+            <%= link_to t("layouts._header.edit_account"), "#" %>
+            <% if current_user.role_admin?  %>
+              <li class="divider"></li>
+              <%= link_to t("layouts._header.enter_admin"), admins_root_path %>
+            <% end %>
+          </ul>
+        </li>
+      <% else %>
+        <%= link_to login_path do %>
+          <i class="fa fa-user"></i>
+          <%= t "layouts._header.login" %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</nav>
+  <nav class="humberger__menu__nav mobile-menu">
+    <ul>
+      <li class="active">
+        <%= link_to t("layouts._header.home"), "#" %>
+      </li>
+      <li>
+        <%= link_to t("layouts._header.products"), "#" %>
+      </li>
+      <li>
+        <%= link_to t("layouts._header.help"), "#" %>
+      </li>
+    </ul>
+  </nav>
+  <div id="mobile-menu-wrap"></div>
+</div>
+<!-- Humberger End -->
+
+<!-- Header Section Begin -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__right">
+            <div class="header__top__right__language">
+              <%= image_tag("https://res.cloudinary.com/tdh/image/upload/v1595343877/images/language_uyra3n.png") %>
+              <div><%= I18n.locale %></div>
+              <span class="arrow_carrot-down"></span>
+              <ul>
+                <li><%= link_to "layouts._header.vietnamese", locale: "vi" %></li>
+                <li><%= link_to "layouts._header.english", locale: "en" %></li>
+              </ul>
+            </div>
+            <div class="header__top__right__auth">
+              <% if logged_in? %>
+                <li class="dropdown li-none">
+                  <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+                    <%= current_user.name %>
+                    <b class="caret"></b>
+                  <% end %>
+                  <ul class="dropdown-menu">
+                    <li class="divider"></li>
+                    <%= link_to t("layouts._header.logout"), logout_path, method: :delete %>
+                    <li class="divider"></li>
+                    <%= link_to t("layouts._header.edit_account"), "#" %>
+                    <% if current_user.role_admin?  %>
+                      <li class="divider"></li>
+                      <%= link_to t("layouts._header.enter_admin"), admins_root_path %>
+                    <% end %>
+                  </ul>
+                </li>
+              <% else %>
+                <%= link_to login_path do %>
+                  <i class="fa fa-user"></i>
+                  <%= t "layouts._header.login" %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="header__logo">
+          <%= link_to root_path do %>
+            <%= image_tag("https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/08/image13.png") %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <nav class="header__menu">
+          <ul>
+            <li>
+              <%= link_to t("layouts._header.home"), root_path %>
+            </li>
+            <li>
+              <%= link_to t("layouts._header.shop"), root_path %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <div class="header__cart">
+          <ul>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-shopping-bag"></i>
+                <span class="length-cart">
+                  <%= session[:cart].length if session[:cart] %>
+                </span>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+<!-- Header Section End -->
