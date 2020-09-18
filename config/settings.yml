@@ -18,3 +18,4 @@ admins:
     max_inventory: 100000
 users:
   checkbox_remember: "1"
+language_image: "https://res.cloudinary.com/tdh/image/upload/v1595343877/images/language_uyra3n.png"
