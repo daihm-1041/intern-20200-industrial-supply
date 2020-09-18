@@ -8,6 +8,9 @@ validate:
     min_length_password: 5
     validate_email_regex2: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validate_phone_number_regex2: !ruby/regexp /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
+  products:
+    max_length_name: 50
+    max_length_description: 65535
 products:
   number_page: 15
 admins:
