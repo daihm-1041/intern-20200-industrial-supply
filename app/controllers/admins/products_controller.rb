@@ -1,5 +1,5 @@
 class Admins::ProductsController < Admins::BaseController
-  before_action :load_data, except: %i(show destroy index)
+  before_action :load_data, except: %i(show destroy)
   before_action :find_product, except: %i(new create index)
 
   def new
@@ -19,7 +19,7 @@ class Admins::ProductsController < Admins::BaseController
   end
 
   def index
-    @products = Product.page(params[:page]).per Settings.products.number_page
+    @products = @products.page(params[:page]).per Settings.products.number_page
   end
 
   def edit; end
@@ -61,6 +61,11 @@ class Admins::ProductsController < Admins::BaseController
   def load_data
     @categories = Category.all
     @suppliers = Supplier.all
+    @products = Product.by_name(params[:keyword])
+                       .by_supplier(params[:brand_id])
+                       .by_category(params[:category_id])
+                       .by_from_price(params[:from_price])
+                       .by_to_price(params[:to_price])
   end
 
   def product_params

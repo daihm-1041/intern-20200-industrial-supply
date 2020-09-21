@@ -15,8 +15,11 @@ class Product < ApplicationRecord
 
   accepts_nested_attributes_for :images, allow_destroy: true
 
-  validates :name, :description, presence: true,
-              uniqueness: {case_sensitive: false}
+  validates :name, presence: true,
+            uniqueness: {case_sensitive: false},
+            length: {maximum: Settings.validate.products.max_length_name}
+  validates :description, presence: true,
+            length: {maximum: Settings.validate.products.max_length_description}
   validates :inventory_number, presence: true,
     numericality: {
       less_than_or_equal_to: Settings.admins.products.max_inventory,
@@ -29,4 +32,26 @@ class Product < ApplicationRecord
       greater_than_or_equal_to: Settings.admins.products.min_price,
       only_integer: true
     }
+
+  scope :by_supplier, (lambda do |brand_ids|
+    where brand_id: brand_ids if brand_ids.present?
+  end)
+
+  scope :by_name, (lambda do |value|
+    where("products.name LIKE '%#{value}%'") if value.present?
+  end)
+
+  scope :by_category, (lambda do |category_id|
+    where(category_id: category_id) if category_id.present?
+  end)
+
+  scope :by_from_price, (lambda do |from_price|
+    where("price >= ?", from_price) if from_price.present?
+  end)
+
+  scope :by_to_price, (lambda do |to_price|
+    where("price <= ?", to_price) if to_price.present?
+  end)
+
+  default_scope{order(id: :desc)}
 end
