@@ -9,6 +9,9 @@ vi:
     header:
       title: "Industrial Supply"
       logo_content: "Industrial Supply"
+      vietnamese: Tiếng Việt
+      english: "english"
+      search: "search"
   users:
     failt: "Thêm sản phẩm thất bại"
     success: "Thêm user thành công"
@@ -73,3 +76,21 @@ vi:
         placeholder_max_price: Enter max price
         search: Search
         reset: Reset
+  products:
+    index:
+      all_products: Tất cả sản phẩm
+      sort_by: Sắp xếp
+      asc: Giá tăng dần
+      desc: Giá giảm dần
+      products: sản phẩm
+      all: Tất cả
+      price: Mức giá
+      apply: Áp dụng
+    show:
+      product_detail: Chi tiết sản phẩm
+      add_to_cart: THÊM VÀO GIỎ HÀNG
+      avaiable: Còn lại
+      description: Mô tả
+      reviews: Bình luận
+      related_product: Sản phẩm tương tự
+      unknown_product: Không tìm thấy sản phẩm

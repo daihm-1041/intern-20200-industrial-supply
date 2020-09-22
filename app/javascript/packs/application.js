@@ -1,6 +1,11 @@
 require('@rails/ujs').start()
-require('turbolinks').start()
 require('@rails/activestorage').start()
 require('channels')
 require('jquery')
-import 'bootstrap'
+require('mixitup')
+require('packs/bootstrap.min')
+require('packs/jquery-ui.min')
+require('packs/jquery.nice-select.min')
+require('packs/jquery-slicknav')
+require('packs/owl.carousel.min')
+require('packs/main')

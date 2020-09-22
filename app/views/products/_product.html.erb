@@ -1,0 +1,7 @@
+<div class="thumbnail">
+  <%= image_tag product.images.first.image_data, alt: product.name %>
+  <div class="caption">
+    <h3><%= link_to product.name, product_path(product) %></h3>
+    <p><%= number_to_currency(product.price, locale: :vi) %></p>
+  </div>
+</div>

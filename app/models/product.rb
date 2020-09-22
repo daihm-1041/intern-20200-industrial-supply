@@ -53,5 +53,7 @@ class Product < ApplicationRecord
     where("price <= ?", to_price) if to_price.present?
   end)
 
-  default_scope{order(id: :desc)}
+  scope :order_by_price, (lambda do |order_type|
+    order(price: order_type) if order_type.present?
+  end)
 end
