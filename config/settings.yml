@@ -22,3 +22,6 @@ admins:
 users:
   checkbox_remember: "1"
 language_image: "https://res.cloudinary.com/tdh/image/upload/v1595343877/images/language_uyra3n.png"
+min: 10000
+max: 1000000
+per_page_four: 4

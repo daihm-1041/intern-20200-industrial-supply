@@ -1,0 +1,21 @@
+<div class="filter__item">
+  <div class="row">
+    <div class="col-lg-8 col-md-8">
+      <div class="filter__sort">
+        <span><%= t "products.index.sort_by" %></span>
+        <select id="order-products" >
+          <option value="asc" ><%= t "products.index.asc" %></option>
+          <option value="desc"
+            <%= params[:order].eql?("desc") ?
+              "selected" : "" %> ><%= t "products.index.desc" %>
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="filter__found text-right">
+        <h6><span><%= @products.total_count %></span> <%= t "products.index.products" %></h6>
+      </div>
+    </div>
+  </div>
+</div>
