@@ -94,3 +94,44 @@ vi:
       reviews: Bình luận
       related_product: Sản phẩm tương tự
       unknown_product: Không tìm thấy sản phẩm
+  carts:
+    index:
+      carts: Giỏ hàng
+      product: Sản phẩm
+      price: Giá
+      quantity: Số lượng
+      total: Tổng tiền
+      cart_total: Tổng tiền giỏ hàng
+      checkout: Tiến hành thanh toán
+      continue_shopping: Quay lại mua sắm
+  orders:
+    new:
+      checkout_detail: Chi tiết đơn hàng
+      checkouts: Đơn hàng
+    form:
+      name: Tên
+      address: Địa chỉ
+      phone: Số điện thoại
+      email: Email
+      your_order: Đơn hàng của tôi
+      products: Sản phẩm
+      total: Tổng
+      check_payment: Tiền mặt
+      place_order: Đặt hàng
+      placeholder_address: Nhập địa chỉ
+      placeholder_phone: Nhập số điện thoại
+    create:
+      order_create_failed: Đơn hàng tạo thất bại
+      order_created_success: Đơn hàng tạo thành công
+    index:
+      order_history: Lịch sử đơn hàng
+    item:
+      order: Đơn hàng
+      total_amount: Thành tiền
+      quantity: Số lượng
+      pending: Đang chờ
+      handing: Đang xử lý
+      resolved: Đã hoàn thành
+      created_at: "Ngày tạo: "
+      remove: Hủy
+      you_sure?: Bạn có chắc chắn xóa?

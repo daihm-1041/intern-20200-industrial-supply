@@ -1,0 +1,37 @@
+<%= form_for @order do |f| %>
+  <%= render "shared/error_messages", object: @order %>
+  <div class="row">
+    <div class="col-lg-8 col-md-6">
+      <div class="checkout__input">
+        <p><%= t ".name" %><span>*</span></p>
+        <%= f.text_field :name_receiver, value: current_user.name %>
+      </div>
+      <div class="checkout__input">
+        <p><%= t ".address" %><span>*</span></p>
+        <%= f.text_field :address_receiver, placeholder: t(".placeholder_address"), class:"checkout__input__add" %>
+      </div>
+      <div class="checkout__input">
+        <p><%= t ".phone" %><span>*</span></p>
+        <%= f.text_field :phone_receiver, placeholder: t(".placeholder_phone"), class:"checkout__input__add" %>
+      </div>
+    </div>
+    <%= hidden_field_tag "order[user_id]", current_user.id %>
+    <%= hidden_field_tag "order[status]", "pending" %>
+    <div class="col-lg-4 col-md-6">
+      <div class="checkout__order">
+        <h4><%= t ".your_order" %></h4>
+        <div class="checkout__order__products"><%= t ".products" %> <span><%= t ".total" %></span></div>
+        <ul>
+          <% @carts.each_with_index do |item, index| %>
+            <%= hidden_field_tag "order[order_details_attributes][#{index}][product_id]", item.id %>
+            <%= hidden_field_tag "order[order_details_attributes][#{index}][quantity]", session[:cart][index]["quantity"] %>
+            <%= hidden_field_tag "order[order_details_attributes][#{index}][amount]", item.price * session[:cart][index]["quantity"] %>
+            <li><%= item.name %><span><%= item.price * session[:cart][index]["quantity"] %></span></li>
+          <% end %>
+        </ul>
+        <div class="checkout__order__total"><%= t ".total" %> <span><%= @total %></span></div>
+        <button type="submit" class="site-btn"><%= t ".place_order" %></button>
+      </div>
+    </div>
+  </div>
+<% end %>
