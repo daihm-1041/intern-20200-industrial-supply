@@ -115,3 +115,16 @@ p {
 .display_select_category {
   display: none;
 }
+
+.toast {
+  font-size: 16px;
+}
+
+.custom-toast {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    padding: 8px 18px;
+    background: $primary-success;
+    color: white;
+}

@@ -72,6 +72,9 @@ GEM
       kaminari (>= 0.13)
       rails (>= 3.1)
     builder (3.2.4)
+    bullet (6.1.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.33.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -179,8 +182,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
-    mixitup-rails (3.3.1)
-      railties (>= 3.1)
     msgpack (1.3.3)
     mysql2 (0.5.3)
     nio4r (2.5.3)
@@ -313,6 +314,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.1)
+    uniform_notifier (1.13.0)
     web-console (4.0.4)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -341,6 +343,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap-sass (= 3.4.1)
   bootstrap4-kaminari-views
+  bullet
   capybara (>= 2.15)
   cocoon
   config
@@ -351,7 +354,6 @@ DEPENDENCIES
   kaminari
   listen (~> 3.2)
   mini_magick (= 4.9.5)
-  mixitup-rails
   mysql2
   pry-rails
   puma (~> 4.1)

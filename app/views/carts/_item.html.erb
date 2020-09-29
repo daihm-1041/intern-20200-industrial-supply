@@ -1,0 +1,26 @@
+<% if session[:cart] %>
+  <tr id="row-product-id-<%= item.id %>">
+    <td class="shoping__cart__item">
+      <%= image_tag item.images.first.image_data, class:"w-50" %>
+      <h5><%= item.name %></h5>
+    </td>
+    <td class="shoping__cart__price">
+      <%= number_to_currency item.price %>
+    </td>
+    <td class="shoping__cart__quantity">
+      <div class="quantity">
+        <div class="pro-qty update-cart" data-product-id="<%= item.id %>">
+          <%= text_field_tag nil, session[:cart][item_counter] ? session[:cart][item_counter]["quantity"]: "", disabled: true %>
+        </div>
+      </div>
+    </td>
+    <td class="shoping__cart__total" id="quantity-product-id-<%= item.id %>">
+      <% if session[:cart][item_counter] %>
+        <%= number_to_currency item.price.to_i * session[:cart][item_counter]["quantity"].to_i %>
+      <% end %>
+    </td>
+    <td class="shoping__cart__item__close delete-cart-item" data-product-id="<%= item.id %>" >
+      <span class="icon_close"></span>
+    </td>
+  </tr>
+<% end %>

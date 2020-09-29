@@ -15,7 +15,7 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "#" do %>
+        <%= link_to carts_path do %>
           <i class="fa fa-shopping-bag"></i>
           <span class="length-cart">
             <%= session[:cart].length if session[:cart]%>
@@ -30,8 +30,8 @@
       <div><%= I18n.locale %></div>
       <span class="arrow_carrot-down"></span>
       <ul>
-        <li><%= link_to t("layouts._header.vietnamese"), locale: "vi" %></li>
-        <li><%= link_to t("layouts._header.english"), locale: "en" %></li>
+        <li><%= link_to t("layouts.header.vietnamese"), locale: "vi" %></li>
+        <li><%= link_to t("layouts.header.english"), locale: "en" %></li>
       </ul>
     </div>
     <div class="header__top__right__auth">
@@ -91,8 +91,8 @@
               <div><%= I18n.locale %></div>
               <span class="arrow_carrot-down"></span>
               <ul>
-                <li><%= link_to "layouts._header.vietnamese", locale: "vi" %></li>
-                <li><%= link_to "layouts._header.english", locale: "en" %></li>
+                <li><%= link_to t"layouts.header.vietnamese", locale: "vi" %></li>
+                <li><%= link_to t"layouts.header.english", locale: "en" %></li>
               </ul>
             </div>
             <div class="header__top__right__auth">
@@ -150,7 +150,7 @@
         <div class="header__cart">
           <ul>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to carts_path do %>
                 <i class="fa fa-shopping-bag"></i>
                 <span class="length-cart">
                   <%= session[:cart].length if session[:cart] %>
@@ -159,6 +159,11 @@
             </li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="lol-lg-3">
+      <div class="toast">
+
       </div>
     </div>
     <div class="humberger__open">
