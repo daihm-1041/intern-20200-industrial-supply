@@ -1,0 +1,25 @@
+<%= search_form_for @search, url: admins_orders_path do |f| %>
+  <div class="row">
+    <div class="form-group col-3">
+      <%= f.label "name_receiver_cont", t(".name_receiver") %>
+      <%= f.text_field :name_receiver_cont,
+        placeholder: t(".placeholder_name_receiver",
+        attr: t(".placeholder_name_receiver")),
+        value: params[:q].try(:[], :name_receiver_cont),
+        class: "form-control" %>
+    </div>
+    <div class="form-group col-3">
+      <%= f.label "status_eq", t(".status") %>
+      <%= f.select :status_eq,
+        options_for_select(option_status_order_search,
+        params[:q].try(:[], :status_eq)), {}, {class: "form-control"} %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col d-flex justify-content-end">
+      <%= link_to t(".reset"), admins_orders_path, class: "btn btn-default" %>
+      <%= f.submit t(".search"), class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>
