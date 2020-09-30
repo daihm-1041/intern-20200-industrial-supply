@@ -33,6 +33,9 @@ $(".add-cart").click(function(){
         if (data.total_item == 0){
           $("#row-product-id-" + product_id).remove();
         }
+        if (!data.total || data.total == 0) {
+          $("#checkout-btn").remove();
+        }
       }
     });
   });
