@@ -1,0 +1,56 @@
+<main>
+  <div class="container-fluid">
+    <%= form_for [:admins, @order] do |f| %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row">
+            <dt class="col-sm-6"><%= t ".name" %></dt>
+            <dd class="col-sm-6">
+              <%= @order.name_receiver %>
+            </dd>
+            <dt class="col-sm-6"><%= t ".address_receiver" %></dt>
+            <dd class="col-sm-6">
+              <%= @order.address_receiver %>
+            </dd>
+            <dt class="col-sm-6"><%= t ".phone_receiver" %></dt>
+            <dd class="col-sm-6">
+              <%= @order.phone_receiver %>
+            </dd>
+            <dt class="col-sm-6"><%= t ".total_quantity" %></dt>
+            <dd class="col-sm-6">
+              <%= @order.total_quantity %>
+            </dd>
+            <dt class="col-sm-6"><%= t ".total_amount" %></dt>
+            <dd class="col-sm-6">
+              <%= @order.total_amount %>
+            </dd>
+            <dt class="col-sm-6"><%= t ".total_amount" %></dt>
+            <dd class="col-sm-6">
+              <div class="form-group">
+                <%= f.select :status, options_for_select(option_status_order_update,
+                  @order.status), {}, {class: "form-control"} %>
+              </div>
+            </dd>
+            <div class="col-sm-12">
+              <%= f.submit t(".update"), class: "btn btn-success float-right" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <h3><%= t ".list_product" %></h3>
+          <div class="row">
+            <dt class="col-sm-4"><%= t ".name" %></dt>
+            <dd class="col-sm-4"><%= t ".quantity" %></dd>
+            <dd class="col-sm-4"><%= t ".total_amount" %></dd>
+            <% @order_items.each do |order_item| %>
+              <dt class="col-sm-4"><%= order_item.product.name %></dt>
+              <dd class="col-sm-4"><%= order_item.quantity %></dd>
+              <dd class="col-sm-4"><%= order_item.amount %></dd>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>

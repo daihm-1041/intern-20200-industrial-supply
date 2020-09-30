@@ -1,0 +1,11 @@
+<tr>
+  <td><%= order.name_receiver %></td>
+  <td><%= order.total_quantity %></td>
+  <td><%= order.total_amount %></td>
+  <td><%= t ".#{order.status}" %></td>
+  <td>
+    <%= link_to edit_admins_order_path(order.id), class: "btn btn-info btn-sm" do %>
+        <i class="fas fa-pencil-alt"></i> <%= t ".edit" %>
+      <% end %>
+  </td>
+</tr>

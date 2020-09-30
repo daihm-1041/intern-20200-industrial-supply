@@ -60,6 +60,8 @@ vi:
       create:
         product_created_success: Product created success
         product_create_failed: Create product fail
+      update:
+        product_updated: Update success!
       destroy:
         delete_success: "delete success!"
       form_search:
@@ -138,6 +140,59 @@ vi:
         edit: Sửa
         action: Thao tác
         you_sure?: "Bạn có chắc?"
+    orders:
+      index:
+        list_orders: Danh sách đơn hàng
+        customer_name: Tên khách hàng
+        quantity: Số lượng
+        amount: Tổng tiền
+        status: Trạng thái
+        action: Thao tác
+        counts: "Tổng: "
+      order_item:
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        action: Thao tác
+        show_and_edit: Xem và cập nhật
+      update:
+        order_updated: Đơn hàng được cập nhật thành công
+      show:
+        back: Quay lại
+        order_detail: Chi tiết đơn hàng
+        list_products: Danh sách sản phẩm
+        customer_name: Tên khách hàng
+        product_name: Tên sản phẩm
+        address_receiver: Địa chỉ người nhận
+        phone_receiver: SĐT người nhận
+        quantity: Số lượng
+        amount: Tổng tiền
+        status: Trạng thái
+        action: Thao tác
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        update: Cập nhật
+      edit:
+        back: Quay lại
+        edit_order: Cập nhật đơn hàng
+      form:
+        name_receiver: Tên người nhận
+        address_receiver: Địa chỉ người nhận
+        phone_receiver: SĐT người nhận
+        status: Trạng thái
+        update: Cập nhật
+      form_edit:
+        update: "Cập nhật"
+      form_search:
+        name_receiver: Người nhận
+        placeholder_name_receiver: Nhập tên người nhận
+        status: Trạng thái
+        choose_status: Chọn trạng thái
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        search: "Tìm kiếm"
   products:
     index:
       all_products: Tất cả sản phẩm
@@ -197,3 +252,16 @@ vi:
       created_at: "Ngày tạo: "
       remove: Hủy
       you_sure?: Bạn có chắc chắn xóa?
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            category:
+              required: Sategory không được để trống!
+            supplier:
+              required: Supplier không được để trống!
+        order_detail:
+          attributes:
+            quantity:
+              errors: Số lượng không đủ

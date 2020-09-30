@@ -1,0 +1,36 @@
+<main>
+  <div class="container-fluid">
+    <h1 class="mt-4"><%= t".list_products" %></h1>
+    <%= render "form_search" %>
+    <br>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <h6 class="text-right">
+            <span><%= t ".counts" %><%= @orders.total_count %></span>
+          </h6>
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+              <th><%= t ".customer_name" %></th>
+              <th><%= t ".quantity" %></th>
+              <th><%= t ".amount" %></th>
+              <th><%= t ".status" %></th>
+              <th><%= t ".action" %></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%= render partial: "admins/orders/order_item", collection: @orders, as: :order %>
+            <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content"></div>
+              </div>
+            </div>
+            </tbody>
+          </table>
+          <%= paginate @orders, theme: "twitter-bootstrap-4" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

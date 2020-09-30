@@ -17,4 +17,14 @@ class Order < ApplicationRecord
   validates :name_receiver, :address_receiver, :phone_receiver, :status,
             presence: true
   validates :status, inclusion: {in: %w(pending handing resolved)}
+
+  default_scope{order(id: :desc)}
+
+  def total_quantity
+    order_details.to_a.sum(&:quantity)
+  end
+
+  def total_amount
+    order_details.to_a.sum(&:amount)
+  end
 end
