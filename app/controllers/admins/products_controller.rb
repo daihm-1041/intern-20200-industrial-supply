@@ -62,7 +62,7 @@ class Admins::ProductsController < Admins::BaseController
     @categories = Category.all
     @suppliers = Supplier.all
     @products = Product.by_name(params[:keyword])
-                       .by_supplier(params[:brand_id])
+                       .by_supplier(params[:supplier_id])
                        .by_category(params[:category_id])
                        .by_from_price(params[:from_price])
                        .by_to_price(params[:to_price])
