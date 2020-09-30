@@ -1,0 +1,41 @@
+<%= render "admins/shared/error_messages", object: @user %>
+<%= form_for [:admins, @user] do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: "boring-text" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, class: "boring-text" %>
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, class: "boring-text" %>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone_number, class: "boring-text" %>
+    <%= f.text_field :phone_number, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, class: "boring-text" %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, class: "boring-text" %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :role, t(".role"), class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= f.select :role, options_for_select(option_role_select, @user.role), {}, {class: "form-control"} %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col d-flex justify-content-end">
+      <%= f.submit t(".save"), class: "btn btn-success" %>
+    </div>
+  </div>
+  <br>
+<% end %>

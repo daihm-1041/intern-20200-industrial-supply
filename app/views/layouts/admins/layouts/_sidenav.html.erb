@@ -39,10 +39,10 @@
         <% end %>
         <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
           <nav class="sb-sidenav-menu-nested nav">
-            <%= link_to t(".list_users"), "#", class: "nav-link" %>
+            <%= link_to t(".list_users"), admins_users_path, class: "nav-link" %>
           </nav>
           <nav class="sb-sidenav-menu-nested nav">
-            <%= link_to t(".create_user"), "#", class: "nav-link" %>
+            <%= link_to t(".create_user"), new_admins_user_path, class: "nav-link" %>
           </nav>
         </div>
       </div>

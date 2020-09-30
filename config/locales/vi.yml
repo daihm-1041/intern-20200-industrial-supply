@@ -21,19 +21,18 @@ vi:
     error: "Lỗi khi nhập thông tin"
   sessions:
     new:
-      signup: "Dang ki ngay !!"
-      login: "Dang nhap"
+      signup: "Đăng kí ngay!!"
+      login: "Đăng nhập"
       email: "email"
-      password: "Mat khau"
-      new_users: "Tao tai khoan"
-      remember_me: "Nho tai khoan"
-      remember: "gi nho dang nhap"
-      login_success: "Dang nhap thanh cong"
-      login_failt: "Dang nhap that bai, nhap lai email hoac mat khau"
-      logout: "Da dang xuat"
-      remember: "luu dang nhap"
+      password: "Mật khẩu"
+      new_users: "Tạo tài khoản"
+      remember_me: "Ghi nhớ"
+      remember: "Ghi nhớ đăng nhập"
+      login_success: "Đăng nhập thành công!"
+      login_failt: "Đăng nhập thất bại!"
+      logout: "Đã đăng xuất!"
   admins:
-    delete_sure: "are you sure?"
+    delete_sure: "Bạn có chắc không?"
     products:
       form:
         product_detail: Prouct Details
@@ -76,6 +75,69 @@ vi:
         placeholder_max_price: Enter max price
         search: Search
         reset: Reset
+    users:
+      index:
+        list_users: Danh sách người dùng
+        name: Tên
+        email: Email
+        role: Chức vụ
+        action: Thao tác
+        counts: "Tổng: "
+      create:
+        user_created_success: "them users thanh cong"
+        user_create_failed: "them that bai"
+      form_search:
+        name: Tên
+        placeholder_name: Nhập tên
+        email: Email
+        placeholder_email: Nhập email
+        role: Chức vụ
+        choose_role: Chọn chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        reset: Làm mới
+        search: Tìm kiếm
+      show:
+        name: Tên
+        email: Email
+        role: Chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        back: Quay lại
+      new:
+        back: Quay lại
+        create_user: Tạo mới người dùng
+      edit:
+        back: Quay lại
+        edit_user: Sửa người dùng
+      update:
+        user_updated: "cap nhat thanh cong"
+        user_update_fail: "cap nhat that bai"
+      form:
+        name: Tên
+        placeholder_name: Nhập tên
+        email: Email
+        placeholder_email: Nhập email
+        password: Mật khẩu
+        placeholder_password: Nhập mật khẩu
+        role: Chức vụ
+        choose_role: Chọn chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        back: Quay lại
+        save: Lưu
+      item:
+        delete: Xóa
+        show: Xem
+        edit: Sửa
+        action: Thao tác
+        you_sure?: "Bạn có chắc?"
   products:
     index:
       all_products: Tất cả sản phẩm

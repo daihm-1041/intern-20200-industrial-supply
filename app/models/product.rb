@@ -33,8 +33,8 @@ class Product < ApplicationRecord
       only_integer: true
     }
 
-  scope :by_supplier, (lambda do |brand_ids|
-    where brand_id: brand_ids if brand_ids.present?
+  scope :by_supplier, (lambda do |supplier_ids|
+    where supplier_id: supplier_ids if supplier_ids.present?
   end)
 
   scope :by_name, (lambda do |value|
