@@ -64,6 +64,7 @@ vi:
         product_updated: Update success!
       destroy:
         delete_success: "delete success!"
+        product_delete_fail: "delete fail!"
       form_search:
         key_word: search by name
         placeholder_key_word: Enter keyword
