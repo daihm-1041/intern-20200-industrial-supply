@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     if current_user.role_admin?
       redirect_to admins_root_url
     else
-      redirect_to root_url
+      redirect_to after_sign_in_path
     end
   end
 end

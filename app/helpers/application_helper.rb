@@ -22,4 +22,15 @@ module ApplicationHelper
       [I18n.t("admins.orders.form_search.#{value}"), key]
     end
   end
+
+  def toastr_flash type
+    case type
+    when "danger"
+      "toastr.error"
+    when "success"
+      "toastr.success"
+    else
+      "toastr.info"
+    end
+  end
 end

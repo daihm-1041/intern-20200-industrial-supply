@@ -7,20 +7,14 @@
     <%= stylesheet_link_tag "admins/admins", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "admins/font-awesome-all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "admins", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "toastr", "data-turbolinks-track": "reload" %>
   </head>
   <body class="sb-nav-fixed">
+    <%= render "shared/toastr" %>
     <%= render "layouts/admins/layouts/navbar" %>
     <div id="layoutSidenav">
       <%= render "layouts/admins/layouts/sidenav" %>
       <div id="layoutSidenav_content">
-        <% flash.each do |message_type, message| %>
-          <div id="alert-message" class="alert alert-<%= message_type %> alert-dismissible fade show" role="alert">
-            <%= message %>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-        <% end %>
         <%= yield %>
         <%= render "layouts/admins/layouts/footer" %>
       </div>
