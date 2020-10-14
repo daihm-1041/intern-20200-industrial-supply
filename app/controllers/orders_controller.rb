@@ -28,6 +28,7 @@ class OrdersController < ApplicationController
   def require_login
     return if current_user
 
+    store_location
     flash[:info] = t ".login_to_continue"
     redirect_to login_path
   end

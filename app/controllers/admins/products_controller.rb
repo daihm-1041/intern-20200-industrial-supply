@@ -66,6 +66,7 @@ class Admins::ProductsController < Admins::BaseController
                        .by_category(params[:category_id])
                        .by_from_price(params[:from_price])
                        .by_to_price(params[:to_price])
+                       .includes :supplier, :category
   end
 
   def product_params

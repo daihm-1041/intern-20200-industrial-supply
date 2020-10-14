@@ -44,4 +44,14 @@ module SessionsHelper
     session.delete :user_id
     @current_user = nil
   end
+
+  def store_location
+    session[:previous_url] = request.original_url if request.get?
+  end
+
+  def after_sign_in_path
+    previous_path = session[:previous_url]
+    session[:previous_url] = nil
+    previous_path || root_path
+  end
 end
