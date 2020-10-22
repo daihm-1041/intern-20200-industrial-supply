@@ -163,8 +163,8 @@ var csrf_token = $('meta[name="csrf-token"]').attr('content');
   Price Range Slider
 ------------------------ */
   var rangeSlider = $(".price-range"),
-    minamount = $("#minamount"),
-    maxamount = $("#maxamount"),
+    minamount = $('.minamount'),
+    maxamount = $('.maxamount'),
     minPrice = rangeSlider.data('min'),
     maxPrice = rangeSlider.data('max');
   rangeSlider.slider({

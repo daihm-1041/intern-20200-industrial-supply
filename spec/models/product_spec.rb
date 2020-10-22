@@ -159,26 +159,6 @@ RSpec.describe Product, type: :model do
     end
   end
 
-  describe ".order_by_price" do
-    context "when param is asc" do
-      it "return record" do
-        expect(Product.order_by_price("asc").first).to eq r1
-      end
-    end
-
-    context "when param is desc" do
-      it "return record" do
-        expect(Product.order_by_price("desc").first).to eq r4
-      end
-    end
-
-    context "when nil param" do
-      it "return all record" do
-         expect(Product.by_from_price(nil)).to eq [r1, r2, r3, r4]
-      end
-    end
-  end
-
   describe ".filter_by_ids" do
     context "when valid param" do
       it "return record" do
