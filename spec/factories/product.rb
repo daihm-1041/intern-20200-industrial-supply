@@ -4,8 +4,7 @@ FactoryBot.define do
     inventory_number { 100 }
     price { 100000 }
     description { Faker::Lorem.paragraph }
-
-    association :supplier
-    association :category
+    supplier {FactoryBot.create :supplier}
+    category {FactoryBot.create :category}
   end
 end

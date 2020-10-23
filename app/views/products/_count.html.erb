@@ -3,18 +3,45 @@
     <div class="col-lg-8 col-md-8">
       <div class="filter__sort">
         <span><%= t "products.index.sort_by" %></span>
-        <select id="order-products" >
-          <option value="asc" ><%= t "products.index.asc" %></option>
-          <option value="desc"
-            <%= params[:order].eql?("desc") ?
-              "selected" : "" %> ><%= t "products.index.desc" %>
-          </option>
-        </select>
+        <%= sort_link @q, :price, t("products.index.asc"),
+          default_order: :asc, remote: true %>
+        <%= sort_link @q, :price, t("products.index.desc"),
+          default_order: :desc, remote: true %>
       </div>
     </div>
+
     <div class="col-lg-4 col-md-4">
       <div class="filter__found text-right">
-        <h6><span><%= @products.total_count %></span> <%= t "products.index.products" %></h6>
+        <h6>
+          <span><%= @products.total_count %></span>
+          <%= t "products.index.products" %>
+        </h6>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4">
+      <div class="sidebar">
+        <%= search_form_for @q, remote: true do |f| %>
+          <div class="sidebar__item">
+            <h4><%= t "products.index.price" %></h4>
+            <div class="price-range-wrap">
+              <div class="price-range ui-slider ui-corner-all
+                ui-slider-horizontal ui-widget ui-widget-content"
+                  data-min="<%= Settings.min %>" data-max="<%= Settings.max %>">
+                <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+              </div>
+              <div class="range-slider">
+                <div class="price-input">
+                  <%= f.search_field :price_gteq, class: "text-left minamount" %>
+                  <%= f.search_field :price_lteq, class: "text-right maxamount"%>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%= button_tag t "products.index.apply", name: nil, class: "site-btn" %>
+        <% end %>
       </div>
     </div>
   </div>
