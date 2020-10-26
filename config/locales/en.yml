@@ -1,0 +1,391 @@
+en:
+  hello: "Hello world"
+  title: "Industrial Supply"
+  static_page:
+    title: "Cung cap vat tu cong nghiep"
+  layouts:
+    application:
+      title: "Home page"
+    header:
+      title: "Industrial Supply"
+      logo_content: "Industrial Supply"
+      vietnamese: Tiếng Việt
+      english: "english"
+      search: "search"
+  admins:
+    delete_sure: "Bạn có chắc không?"
+    products:
+      form:
+        product_detail: Prouct Details
+        name: Name
+        category: Category
+        brand: Brand
+        price: Price
+        inventory_number: Inventory number
+        status: Status
+        description: Description
+        placeholder_name: Enter name
+        choose_category: Choose category
+        choose_brand: Choose brand
+        placeholder_price: Enter price
+        placeholder_inventory_number: Enter inventory number
+        placeholder_description: Enter description
+        images: Images
+        add_image: Add image
+        save: "save"
+      image_fields:
+        placeholder_image: Enter url of image
+        remove_image: Remove image
+      new:
+        create_product: Create product
+      create:
+        product_created_success: Product created success
+        product_create_failed: Create product fail
+      update:
+        product_updated: Update success!
+      destroy:
+        delete_success: "delete success!"
+        product_delete_fail: "delete fail!"
+      form_search:
+        key_word: search by name
+        placeholder_key_word: Enter keyword
+        category: Category
+        choose_category: Choose category
+        supplier: supplier
+        choose_category: Choose category
+        from_price: From price
+        to_price: To price
+        placeholder_min_price: Enter min price
+        placeholder_max_price: Enter max price
+        search: Search
+        reset: Reset
+    users:
+      index:
+        list_users: Danh sách người dùng
+        name: Tên
+        email: Email
+        role: Chức vụ
+        action: Thao tác
+        counts: "Tổng: "
+      create:
+        user_created_success: "them users thanh cong"
+        user_create_failed: "them that bai"
+      form_search:
+        name: Tên
+        placeholder_name: Nhập tên
+        email: Email
+        placeholder_email: Nhập email
+        role: Chức vụ
+        choose_role: Chọn chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        reset: Làm mới
+        search: Tìm kiếm
+      show:
+        name: Tên
+        email: Email
+        role: Chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        back: Quay lại
+      new:
+        back: Quay lại
+        create_user: Tạo mới người dùng
+      edit:
+        back: Quay lại
+        edit_user: Sửa người dùng
+      update:
+        user_updated: "cap nhat thanh cong"
+        user_update_fail: "cap nhat that bai"
+      form:
+        name: Tên
+        placeholder_name: Nhập tên
+        email: Email
+        placeholder_email: Nhập email
+        password: Mật khẩu
+        placeholder_password: Nhập mật khẩu
+        role: Chức vụ
+        choose_role: Chọn chức vụ
+        user: Người dùng
+        admin: Quản trị viên
+        support: Cộng tác viên
+        logistic: Giao hàng
+        back: Quay lại
+        save: Lưu
+      item:
+        delete: Xóa
+        show: Xem
+        edit: Sửa
+        action: Thao tác
+        you_sure?: "Bạn có chắc?"
+    orders:
+      index:
+        list_orders: Danh sách đơn hàng
+        customer_name: Tên khách hàng
+        quantity: Số lượng
+        amount: Tổng tiền
+        status: Trạng thái
+        action: Thao tác
+        counts: "Tổng: "
+      order_item:
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        action: Thao tác
+        show_and_edit: Xem và cập nhật
+      update:
+        order_updated: Đơn hàng được cập nhật thành công
+      show:
+        back: Quay lại
+        order_detail: Chi tiết đơn hàng
+        list_products: Danh sách sản phẩm
+        customer_name: Tên khách hàng
+        product_name: Tên sản phẩm
+        address_receiver: Địa chỉ người nhận
+        phone_receiver: SĐT người nhận
+        quantity: Số lượng
+        amount: Tổng tiền
+        status: Trạng thái
+        action: Thao tác
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        update: Cập nhật
+      edit:
+        back: Quay lại
+        edit_order: Cập nhật đơn hàng
+      form:
+        name_receiver: Tên người nhận
+        address_receiver: Địa chỉ người nhận
+        phone_receiver: SĐT người nhận
+        status: Trạng thái
+        update: Cập nhật
+      form_edit:
+        update: "Cập nhật"
+      form_search:
+        name_receiver: Người nhận
+        placeholder_name_receiver: Nhập tên người nhận
+        status: Trạng thái
+        choose_status: Chọn trạng thái
+        pending: Đang chờ
+        handing: Chờ xử lý
+        resolved: Hoàn thành
+        search: "Tìm kiếm"
+  products:
+    index:
+      all_products: Tất cả sản phẩm
+      sort_by: Sắp xếp
+      asc: Giá tăng dần
+      desc: Giá giảm dần
+      products: sản phẩm
+      all: Tất cả
+      price: Mức giá
+      apply: Áp dụng
+    show:
+      product_detail: Chi tiết sản phẩm
+      add_to_cart: THÊM VÀO GIỎ HÀNG
+      avaiable: Còn lại
+      description: Mô tả
+      reviews: Bình luận
+      related_product: Sản phẩm tương tự
+      unknown_product: Không tìm thấy sản phẩm
+  carts:
+    index:
+      carts: Giỏ hàng
+      product: Sản phẩm
+      price: Giá
+      quantity: Số lượng
+      total: Tổng tiền
+      cart_total: Tổng tiền giỏ hàng
+      checkout: Tiến hành thanh toán
+      continue_shopping: Quay lại mua sắm
+  orders:
+    new:
+      checkout_detail: Chi tiết đơn hàng
+      checkouts: Đơn hàng
+    form:
+      name: Tên
+      address: Địa chỉ
+      phone: Số điện thoại
+      email: Email
+      your_order: Đơn hàng của tôi
+      products: Sản phẩm
+      total: Tổng
+      check_payment: Tiền mặt
+      place_order: Đặt hàng
+      placeholder_address: Nhập địa chỉ
+      placeholder_phone: Nhập số điện thoại
+    create:
+      order_create_failed: Đơn hàng tạo thất bại
+      order_created_success: Đơn hàng tạo thành công
+    index:
+      order_history: Lịch sử đơn hàng
+    item:
+      order: Đơn hàng
+      total_amount: Thành tiền
+      quantity: Số lượng
+      pending: Đang chờ
+      handing: Đang xử lý
+      resolved: Đã hoàn thành
+      created_at: "Ngày tạo: "
+      remove: Hủy
+      you_sure?: Bạn có chắc chắn xóa?
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            category:
+              required: Sategory không được để trống!
+            supplier:
+              required: Supplier không được để trống!
+        order_detail:
+          attributes:
+            quantity:
+              errors: Số lượng không đủ
+    attributes:
+      user:
+        confirmation_sent_at: Confirmation sent at
+        confirmation_token: Confirmation token
+        confirmed_at: Confirmed at
+        created_at: Created at
+        current_password: Current password
+        current_sign_in_at: Current sign in at
+        current_sign_in_ip: Current sign in IP
+        email: Email
+        encrypted_password: Encrypted password
+        failed_attempts: Failed attempts
+        last_sign_in_at: Last sign in at
+        last_sign_in_ip: Last sign in IP
+        locked_at: Locked at
+        password: Password
+        password_confirmation: Password confirmation
+        remember_created_at: Remember created at
+        remember_me: Remember me
+        reset_password_sent_at: Reset password sent at
+        reset_password_token: Reset password token
+        sign_in_count: Sign in count
+        unconfirmed_email: Unconfirmed email
+        unlock_token: Unlock token
+        updated_at: Updated at
+    models:
+      user: User
+  users:
+    confirmations:
+      confirmed: Your email address has been successfully confirmed.
+      new:
+        resend_confirmation_instructions: Resend confirmation instructions
+      send_instructions: You will receive an email with instructions for how to confirm your email address in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes.
+    failure:
+      already_authenticated: You are already signed in.
+      inactive: Your account is not activated yet.
+      invalid: Invalid %{authentication_keys} or password.
+      last_attempt: You have one more attempt before your account is locked.
+      locked: Your account is locked.
+      not_found_in_database: Invalid %{authentication_keys} or password.
+      timeout: Your session expired. Please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your email address before continuing.
+    mailer:
+      confirmation_instructions:
+        action: Confirm my account
+        greeting: Welcome %{recipient}!
+        instruction: 'You can confirm your account email through the link below:'
+        subject: Confirmation instructions
+      email_changed:
+        greeting: Hello %{recipient}!
+        message: We're contacting you to notify you that your email has been changed to %{email}.
+        subject: Email Changed
+      password_change:
+        greeting: Hello %{recipient}!
+        message: We're contacting you to notify you that your password has been changed.
+        subject: Password Changed
+      reset_password_instructions:
+        action: Change my password
+        greeting: Hello %{recipient}!
+        instruction: Someone has requested a link to change your password. You can do this through the link below.
+        instruction_2: If you didn't request this, please ignore this email.
+        instruction_3: Your password won't change until you access the link above and create a new one.
+        subject: Reset password instructions
+      unlock_instructions:
+        action: Unlock my account
+        greeting: Hello %{recipient}!
+        instruction: 'Click the link below to unlock your account:'
+        message: Your account has been locked due to an excessive number of unsuccessful sign in attempts.
+        subject: Unlock instructions
+    omniauth_callbacks:
+      failure: Could not authenticate you from %{kind} because "%{reason}".
+      success: Successfully authenticated from %{kind} account.
+    passwords:
+      edit:
+        change_my_password: Change my password
+        change_your_password: Change your password
+        confirm_new_password: Confirm new password
+        new_password: New password
+      new:
+        forgot_your_password: Forgot your password?
+        send_me_reset_password_instructions: Send me reset password instructions
+      no_token: You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: You will receive an email with instructions on how to reset your password in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: Your password has been changed successfully. You are now signed in.
+      updated_not_active: Your password has been changed successfully.
+    registrations:
+      destroyed: Bye! Your account has been successfully cancelled. We hope to see you again soon.
+      edit:
+        are_you_sure: Are you sure?
+        cancel_my_account: Cancel my account
+        currently_waiting_confirmation_for_email: 'Currently waiting confirmation for: %{email}'
+        leave_blank_if_you_don_t_want_to_change_it: leave blank if you don't want to change it
+        title: Edit %{resource}
+        unhappy: Unhappy?
+        update: Update
+        we_need_your_current_password_to_confirm_your_changes: we need your current password to confirm your changes
+      new:
+        sign_up: Sign up
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address.
+      updated: Your account has been updated successfully.
+      updated_but_not_signed_in: Your account has been updated successfully, but since your password was changed, you need to sign in again
+    sessions:
+      already_signed_out: Signed out successfully.
+      new:
+        sign_in: Log in
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+    shared:
+      links:
+        back: Back
+        didn_t_receive_confirmation_instructions: Didn't receive confirmation instructions?
+        didn_t_receive_unlock_instructions: Didn't receive unlock instructions?
+        forgot_your_password: Forgot your password?
+        sign_in: Log in
+        sign_in_with_provider: Sign in with %{provider}
+        sign_up: Sign up
+      minimum_password_length:
+        one: "(%{count} character minimum)"
+        other: "(%{count} characters minimum)"
+    unlocks:
+      new:
+        resend_unlock_instructions: Resend unlock instructions
+      send_instructions: You will receive an email with instructions for how to unlock your account in a few minutes.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions for how to unlock it in a few minutes.
+      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+  errors:
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"

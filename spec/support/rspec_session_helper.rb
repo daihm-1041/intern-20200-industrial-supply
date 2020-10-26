@@ -1,9 +1,14 @@
 module RSpecSessionHelper
-  def log_in user
-    request.session[:user_id] = user.id
+  include Warden::Test::Helpers
+
+  def sign_in(resource_or_scope, resource = nil)
+    resource ||= resource_or_scope
+    scope = Devise::Mapping.find_scope!(resource_or_scope)
+    login_as(resource, scope: scope)
   end
 
-  def current_user
-    User.find_by id: request.session[:user_id]
+  def sign_out(resource_or_scope)
+    scope = Devise::Mapping.find_scope!(resource_or_scope)
+    logout(scope)
   end
 end

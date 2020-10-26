@@ -18,7 +18,7 @@ RSpec.describe Admins::ProductsController, type: :controller do
   end
 
   context "when admin login" do
-    before { log_in admin_user }
+    before { sign_in admin_user }
 
     describe "GET #new" do
       before { get :new }
@@ -162,7 +162,7 @@ RSpec.describe Admins::ProductsController, type: :controller do
   end
 
   context "when normal login" do
-    before { log_in user }
+    before { sign_in user }
 
     describe "GET #index" do
       before { get :index}
