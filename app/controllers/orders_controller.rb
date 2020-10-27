@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
     if @order.save
       session.delete :cart
       flash[:success] = t "orders.create.order_created_success"
-      redirect_to root_path
+      redirect_to orders_history_path @order
     else
       flash[:danger] = t "orders.create.order_create_failed"
       render :new

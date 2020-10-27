@@ -103,25 +103,27 @@
                     <b class="caret"></b>
                   <% end %>
                   <ul class="dropdown-menu">
+                    <%= link_to t("layouts.header.edit_account"), edit_user_registration_path %>
+                     <li class="divider"></li>
+                    <%= link_to t("layouts.header.order_history"), orders_history_index_path %>
                     <li class="divider"></li>
-                    <%= link_to t("layouts._header.logout"), destroy_user_session_path, method: :delete %>
-                    <li class="divider"></li>
-                    <%= link_to t("layouts._header.edit_account"), edit_user_registration_path %>
+                    <%= link_to t("layouts.header.logout"), destroy_user_session_path, method: :delete %>
                     <% if current_user.role_admin?  %>
                       <li class="divider"></li>
-                      <%= link_to t("layouts._header.enter_admin"), admins_root_path %>
+                      <%= link_to t("layouts.header.enter_admin"), admins_root_path %>
                     <% end %>
                   </ul>
                 </li>
               <% else %>
                 <%= link_to new_user_session_path do %>
                   <i class="fa fa-user"></i>
-                  <%= t "layouts._header.login" %>
+                  <%= t "layouts.header.login" %>
                 <% end %>
               <% end %>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>

@@ -12,6 +12,11 @@ en:
       vietnamese: Tiếng Việt
       english: "english"
       search: "search"
+      login: login
+      logout: logout
+      edit_account: edit_account
+      order_history: order_history
+      enter_admin: enter_admin
   admins:
     delete_sure: "Bạn có chắc không?"
     products:
@@ -389,3 +394,26 @@ en:
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  orders_history:
+    order_item:
+      show: show
+    product_item:
+    index:
+      list_orders: list orders
+      counts: counts
+      id: id
+      date: date
+      quantity: quantity
+      amount: amount
+      status: status
+      action: action
+      continue_shopping: continue_shopping
+    show:
+      orders: orders
+      product: product
+      quantity: quantity
+      total: total
+      total_checkout: total_checkout
+      continue_shopping: continue_shopping
+      history_orders: history_orders
+      unknown_order: unknown_order

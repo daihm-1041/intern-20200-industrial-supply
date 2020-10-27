@@ -141,3 +141,22 @@ p {
 .width-at{
   width: auto;
 }
+
+.order-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.order-detail-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+img.order-detail-img {
+  width: 64px;
+}
+
+.order-detail-container-big {
+  max-width: 1000px;
+  width: 100%;
+}

@@ -12,6 +12,11 @@ vi:
       vietnamese: Tiếng Việt
       english: English
       search: "search"
+      login: đăng nhập
+      logout: đăng xuất
+      edit_account: chỉnh sửa cá nhân
+      order_history: lịch sử đặt hàng
+      enter_admin: enter admin
   admins:
     delete_sure: "Bạn có chắc không?"
     products:
@@ -389,3 +394,26 @@ vi:
       not_saved:
         one: '1 lỗi khi lưu %{resource}:'
         other: "%{count} lỗi khi lưu %{resource}:"
+  orders_history:
+    order_item:
+      show: xem
+    product_item:
+    index:
+      list_orders: danh sách đơn hàng
+      counts: số lượng
+      id: mã đơn hàng
+      date: ngày
+      quantity: số lượng
+      amount: tổng tiền
+      status: trạng thái
+      action: tùy chọn
+      continue_shopping: Tiếp tục mua sắm
+    show:
+      orders: Đơn hàng
+      product: sản phẩm
+      quantity: số lượng
+      total: tổng tiền
+      total_checkout: Thanh Toán
+      continue_shopping: Tiếp tục mua sắm
+      history_orders: xem lịch sử mua hàng
+      unknown_order: sản phẩm không tồn tại
