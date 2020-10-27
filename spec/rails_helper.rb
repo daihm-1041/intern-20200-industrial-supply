@@ -23,7 +23,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-  require 'shoulda/matchers'
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
   Shoulda::Matchers.configure do |config|
     config.integrate do |with|
       with.test_framework :rspec
