@@ -417,3 +417,6 @@ en:
       continue_shopping: continue_shopping
       history_orders: history_orders
       unknown_order: unknown_order
+  unauthorized:
+    manage:
+      all: "Not authorized to %{action} %{subject}."

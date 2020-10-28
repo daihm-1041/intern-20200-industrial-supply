@@ -48,8 +48,11 @@
       </div>
     </div>
     <div class="sb-sidenav-footer">
+
+    <% if user_signed_in? %>
       <div class="small"><%= t ".login_as" %></div>
-      <%= current_user.name %>
-    </div>
+        <%= current_user.name %>
+      </div>
+    <% end %>
   </nav>
 </div>

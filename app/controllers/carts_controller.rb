@@ -2,6 +2,8 @@ class CartsController < ApplicationController
   before_action :declare, :check_exist, :create_sessions_cart,
                 :update_sessions_cart, only: :create
 
+  skip_authorization_check
+
   def index
     return unless session[:cart]
 

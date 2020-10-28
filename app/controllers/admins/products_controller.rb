@@ -2,6 +2,8 @@ class Admins::ProductsController < Admins::BaseController
   before_action :load_data, except: %i(show destroy)
   before_action :find_product, except: %i(new create index)
 
+  load_and_authorize_resource
+
   def new
     @product = Product.new
     @product.images.build

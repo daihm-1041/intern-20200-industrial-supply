@@ -1,6 +1,9 @@
 class OrdersHistoryController < ApplicationController
   before_action :authenticate_user!
   before_action :find_order, only: %i(show)
+
+  load_and_authorize_resource Order, User
+
   def index
     @orders = current_user.orders
                           .includes(:order_details)
