@@ -1,0 +1,10 @@
+<tr>
+  <td><%= order.id %></td>
+  <td><%= order.created_at.strftime Settings.format_date %></td>
+  <td><%= order.total_quantity %></td>
+  <td class="product-price"><%= number_to_currency order.total_amount %></td>
+  <td><%= t "admins.orders.form_search.#{order.status}" %></td>
+  <td class="project-actions text-left">
+    <%= link_to t(".show"), orders_history_path(order), class: "btn btn-primary btn-sm" %>
+  </td>
+</tr>

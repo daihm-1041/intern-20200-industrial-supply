@@ -7,8 +7,6 @@ class User < ApplicationRecord
   PERMIT_CREATE_ATTRIBUTES = %i(name email address phone_number
     password password_confirmation role).freeze
 
-  attr_accessor :remember_token
-
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
 

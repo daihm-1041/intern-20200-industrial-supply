@@ -1,0 +1,12 @@
+<tr>
+  <td class="shoping__cart__item">
+    <%= image_tag order_detail.product.images.first.image_data, class: "order-detail-img" %>
+    <h5><%= link_to order_detail.product.name, product_path(order_detail.product) %></h5>
+  </td>
+  <td class="shoping__cart__price">
+    <%= order_detail.quantity %>
+  </td>
+  <td class="shoping__cart__price">
+    <%= number_to_currency order_detail.amount %>
+  </td>
+</tr>

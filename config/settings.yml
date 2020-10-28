@@ -26,3 +26,4 @@ language_image: "https://res.cloudinary.com/tdh/image/upload/v1595343877/images/
 min: 10000
 max: 1000000
 per_page_four: 4
+format_date: "%d-%m-%Y"
