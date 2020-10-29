@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :orders_history, only: %i(index show)
     namespace :admins do
-      root "dashboard#index"
+      root "products#index"
       resources :products
       resources :users
       resources :orders

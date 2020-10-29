@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
   before_action :get_cart, only: %i(new create)
   before_action :require_login, only: %i(new)
 
+  load_and_authorize_resource
+
   def index; end
 
   def new

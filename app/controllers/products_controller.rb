@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
   before_action :find_product, only: :show
   before_action :load_data, :paginate_products, only: %i(index show)
 
+  load_and_authorize_resource
+
   def index
     respond_to :js, :html
   end

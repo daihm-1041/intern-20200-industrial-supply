@@ -1,6 +1,8 @@
 class Admins::UsersController < Admins::BaseController
   before_action :find_user, except: %i(new create index)
 
+  load_and_authorize_resource
+
   def index
     @search = User.ransack params[:q]
     @users = @search.result

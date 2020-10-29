@@ -417,3 +417,6 @@ vi:
       continue_shopping: Tiếp tục mua sắm
       history_orders: xem lịch sử mua hàng
       unknown_order: sản phẩm không tồn tại
+  unauthorized:
+    manage:
+      all: "Bạn không có quyền truy cập %{action} %{subject}."

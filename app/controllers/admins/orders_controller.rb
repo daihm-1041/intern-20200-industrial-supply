@@ -2,6 +2,8 @@ class Admins::OrdersController < Admins::BaseController
   before_action :find_order, only: %i(edit update)
   before_action :find_order_items, only: %i(edit)
 
+  load_and_authorize_resource
+
   def index
     @search = Order.ransack(params[:q])
     @orders = @search.result.includes(:order_details)
