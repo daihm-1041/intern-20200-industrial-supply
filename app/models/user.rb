@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :lockable, :validatable
+         :recoverable, :rememberable, :lockable, :validatable, :omniauthable,
+         omniauth_providers: %i(facebook google_oauth2)
   PERMIT_ATTRIBUTES = %i(name email address phone_number
     password password_confirmation).freeze
 
@@ -28,12 +29,19 @@ class User < ApplicationRecord
                       maximum: Settings.validate.user.max_length_password},
              allow_nil: true
 
-  before_save :downcase_email
-
   enum role: {user: 0, admin: 1}, _prefix: true
-  private
 
-  def downcase_email
-    email.downcase!
+  class << self
+    def from_omniauth auth
+      where(email: auth.info.email)
+        .first_or_initialize do |user|
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0, 20]
+        user.name = auth.info.name
+        user.uid = auth.uid
+        user.provider = auth.provider
+        user.save validate: false
+      end
+    end
   end
 end

@@ -23,6 +23,11 @@
       <%= f.submit t('.sign_in') %>
     </div>
   <% end %>
-
+  <div class="login-3rd">
+    <%= link_to image_tag("https://image.flaticon.com/icons/svg/281/281764.svg"),
+      user_facebook_omniauth_authorize_path, class: "fb" %>
+    <%= link_to image_tag("https://image.flaticon.com/icons/svg/174/174848.svg"),
+      user_google_oauth2_omniauth_authorize_path, class: "gg" %>
+  </div>
   <%= render "users/shared/links" %>
 </div>

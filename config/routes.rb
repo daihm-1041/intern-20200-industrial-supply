@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   scope "(:locale)", locale: /en|vi/ do
     root "products#index"
-    devise_for :users
+    devise_for :users, skip: :omniauth_callbacks
     resources :products
     resources :carts
     resources :orders
