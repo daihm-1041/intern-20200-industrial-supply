@@ -17,4 +17,6 @@ Devise.setup do |config|
   config.unlock_keys = [:email]
   config.unlock_in = 5.minutes
   config.last_attempt_warning = true
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_SECRET"]
+  config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"]
 end
