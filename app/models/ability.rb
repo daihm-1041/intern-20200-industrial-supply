@@ -14,7 +14,5 @@ class Ability
     can :read, OrderDetail do |k|
       user.orders.pluck(:id).include? k.order_id
     end
-
-    cannot :create, User
   end
 end

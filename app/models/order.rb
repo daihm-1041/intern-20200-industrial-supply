@@ -27,4 +27,8 @@ class Order < ApplicationRecord
   def total_amount
     order_details.to_a.sum(&:amount)
   end
+
+  ransacker :created_at do
+    Arel.sql("date(created_at)")
+  end
 end

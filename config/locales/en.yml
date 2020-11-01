@@ -136,6 +136,7 @@ en:
         status: Trạng thái
         action: Thao tác
         counts: "Tổng: "
+        date: date
       order_item:
         pending: Đang chờ
         handing: Chờ xử lý
@@ -180,6 +181,7 @@ en:
         handing: Chờ xử lý
         resolved: Hoàn thành
         search: "Tìm kiếm"
+        date: date
   products:
     index:
       all_products: Tất cả sản phẩm
@@ -420,3 +422,12 @@ en:
   unauthorized:
     manage:
       all: "Not authorized to %{action} %{subject}."
+  order_mailer:
+    send_order_email:
+      notifycation: notifycation
+      name: name
+      order: mã đơn hàng
+      quantity: order
+      total_amount: total_amount
+      address_receiver: address_receiver
+      phone_receiver: phone_receiver

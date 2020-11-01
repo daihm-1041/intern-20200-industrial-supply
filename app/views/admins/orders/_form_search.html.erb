@@ -14,6 +14,10 @@
         options_for_select(option_status_order_search,
         params[:q].try(:[], :status_eq)), {}, {class: "form-control"} %>
     </div>
+    <div class="form-group col-3">
+      <%= f.label "date", t(".date") %>
+      <%= f.date_field :created_at_date_equals, {class: "form-control"} %>
+    </div>
   </div>
   <br>
   <div class="row">

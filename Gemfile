@@ -26,6 +26,7 @@ gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "ransack"
 gem "sass-rails", ">= 6"
+gem "sidekiq"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 
