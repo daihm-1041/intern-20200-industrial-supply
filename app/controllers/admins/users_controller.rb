@@ -52,7 +52,7 @@ class Admins::UsersController < Admins::BaseController
   private
 
   def find_user
-    @user = User.find id: params[:id]
+    @user = User.find_by id: params[:id]
     return if @user
 
     flash[:danger] = t ".unknown_user"
