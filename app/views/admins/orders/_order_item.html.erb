@@ -1,5 +1,6 @@
 <tr>
   <td><%= order.name_receiver %></td>
+  <td><%= order.created_at.strftime Settings.format_date %></td>
   <td><%= order.total_quantity %></td>
   <td><%= order.total_amount %></td>
   <td><%= t ".#{order.status}" %></td>

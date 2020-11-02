@@ -136,6 +136,7 @@ vi:
         status: Trạng thái
         action: Thao tác
         counts: "Tổng: "
+        date: ngày tạo
       order_item:
         pending: Đang chờ
         handing: Chờ xử lý
@@ -180,6 +181,7 @@ vi:
         handing: Chờ xử lý
         resolved: Hoàn thành
         search: "Tìm kiếm"
+        date: ngày tạo
   products:
     index:
       all_products: Tất cả sản phẩm
@@ -420,3 +422,12 @@ vi:
   unauthorized:
     manage:
       all: "Bạn không có quyền truy cập %{action} %{subject}."
+  order_mailer:
+    send_order_email:
+      notifycation: xin chào bạn có đơn hàng mới
+      name: tên người nhận
+      order: mã đơn hàng
+      quantity: số lượng
+      total_amount: tổng tiền
+      address_receiver: địa chỉ nhận hàng
+      phone_receiver: số điện thoại

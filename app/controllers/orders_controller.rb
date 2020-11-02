@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
     @order = Order.new order_params
     if @order.save
       session.delete :cart
+      OrderWorker.perform_async @order.id
       flash[:success] = t "orders.create.order_created_success"
       redirect_to orders_history_path @order
     else

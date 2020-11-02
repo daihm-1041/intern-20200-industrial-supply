@@ -1,0 +1,21 @@
+<b>
+  <%= t(".notifycation") %>
+  <br>
+  <%= t(".name") %>:
+  <%= @order.name_receiver %>
+  <br>
+  <%= t(".order") %>: #
+  <%= @order.id %>
+  <br>
+  <%= t(".quantity") %>:
+  <%= @order.total_quantity %>
+  <br>
+  <%= t(".total_amount") %>
+  <%= number_to_currency @order.total_amount %>
+  <br>
+  <%= t(".address_receiver") %>:
+  <%= @order.address_receiver %>
+  <br>
+  <%= t ".phone_receiver"%>:
+  <%= @order.phone_receiver %>
+</b>
