@@ -96,7 +96,14 @@ en:
         admin: Quản trị viên
         support: Cộng tác viên
         logistic: Giao hàng
-        back: Quay lại
+        back: Quay
+        unknown_user: unknown_user
+      edit:
+        unknown_user: unknown_user
+      destroy:
+        delete_success: delete_success
+        user_delete_fail: user_delete_fail
+        unknown_user: unknown_user
       new:
         back: Quay lại
         create_user: Tạo mới người dùng

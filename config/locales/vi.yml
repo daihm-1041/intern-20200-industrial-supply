@@ -97,6 +97,13 @@ vi:
         support: Cộng tác viên
         logistic: Giao hàng
         back: Quay lại
+        unknown_user: không tìm thấy người dùng
+      edit:
+        unknown_user: không tìm thấy người dùng
+      destroy:
+        delete_success: xóa thành công
+        user_delete_fail: xóa thất bại
+        unknown_user: không tìm thấy người dùng
       new:
         back: Quay lại
         create_user: Tạo mới người dùng
