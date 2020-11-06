@@ -1,54 +1,61 @@
 <div class="container">
   <h2><%= t('.title', resource: resource.model_name.human) %></h2>
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-  <div class="form-group">
-    <%= f.label :name, class: "boring-text" %>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
+  <%= form_for(resource, as: resource_name,
+    url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
-  <div class="form-group">
-    <%= f.label :email, class: "boring-text" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name, class: "boring-text" %>
+      <%= f.text_field :name, class: "form-control" %>
+      <%= display_error f.object, :name, t(".name") %>
+    </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <div class="form-group">
+      <%= f.label :email, class: "boring-text" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      <%= display_error f.object, :email, t(".email")%>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :address, class: "boring-text" %>
-    <%= f.text_field :address, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :phone_number, class: "boring-text" %>
-    <%= f.text_field :phone_number, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :current_password %><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-    <br />
-    <em><%= @minimum_password_length %> characters minimum</em>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :address, class: "boring-text" %>
+      <%= f.text_field :address, class: "form-control" %>
+      <%= display_error f.object, :address, t(".address") %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit t(".update"), class: "btn btn-primary" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :phone_number, class: "boring-text" %>
+      <%= f.text_field :phone_number, class: "form-control" %>
+      <%= display_error f.object, :phone_number, t(".phone_number") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :current_password %><br />
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+      <%= display_error f.object, :current_password, t(".current_password") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+      <% end %>
+      <%= display_error f.object, :password, t(".password") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= display_error f.object, :password_confirmation, t(".password_confirmation") %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit t(".update"), class: "btn btn-primary" %>
+    </div>
   <% end %>
-
   <%= link_to t('devise.shared.links.back'), :back %>
 </div>

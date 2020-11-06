@@ -1,5 +1,4 @@
 <div class="container">
-  <%= render "admins/shared/error_messages", object: @product %>
 </div>
 <%= form_for [:admins, @product] do |f| %>
   <div class="form-group row">
@@ -9,6 +8,7 @@
     <div class="col-sm-3">
       <%= f.text_field :name, class: "form-control", placeholder: t(".placeholder_name") %>
     </div>
+      <%= display_error f.object, :name, t(".name") %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
@@ -17,6 +17,7 @@
     <div class="col-sm-3">
       <%= f.select :supplier_id, options_from_collection_for_select(@suppliers, "id", "name", selected: @product.supplier_id), {include_blank: t(".choose_supplier")}, class: "form-control" %>
     </div>
+    <%= display_error f.object, :supplier, :supplier %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
@@ -25,6 +26,7 @@
     <div class="col-sm-3">
       <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name", selected: @product.category_id), {include_blank: t(".choose_category")}, class: "form-control" %>
     </div>
+    <%= display_error f.object, :category, t(".category") %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
@@ -33,6 +35,7 @@
     <div class="col-sm-3">
       <%= f.number_field :inventory_number, class: "form-control", placeholder: t(".placeholder_inventory_number") %>
     </div>
+    <%= display_error f.object, :inventory_number, t(".inventory_number") %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
@@ -41,6 +44,7 @@
     <div class="col-sm-3">
       <%= f.number_field :price, class: "form-control", placeholder: t(".placeholder_price") %>
     </div>
+    <%= display_error f.object, :price, t(".price") %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">
@@ -49,6 +53,7 @@
     <div class="col-sm-6">
       <%= f.text_area :description, class: "form-control", rows: "15", placeholder: t(".placeholder_description") %>
     </div>
+    <%= display_error f.object, :description, t(".description") %>
   </div>
   <div class="form-group row">
     <div class="col-sm-2">

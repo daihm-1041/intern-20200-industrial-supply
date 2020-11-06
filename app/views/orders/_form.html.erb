@@ -5,14 +5,18 @@
       <div class="checkout__input">
         <p><%= t ".name" %><span>*</span></p>
         <%= f.text_field :name_receiver, value: current_user.name %>
+        <%= display_error f.object, :name_receiver, :name_receiver %>
+
       </div>
       <div class="checkout__input">
         <p><%= t ".address" %><span>*</span></p>
         <%= f.text_field :address_receiver, value: current_user.address, class:"checkout__input__add" %>
+        <%= display_error f.object, :address_receiver, :address_receiver %>
       </div>
       <div class="checkout__input">
         <p><%= t ".phone" %><span>*</span></p>
         <%= f.text_field :phone_receiver, value: current_user.phone_number, class:"checkout__input__add" %>
+        <%= display_error f.object, :phone_receiver, :phone_receiver %>
       </div>
     </div>
     <%= hidden_field_tag "order[user_id]", current_user.id %>

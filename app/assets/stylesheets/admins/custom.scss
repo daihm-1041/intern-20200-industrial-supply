@@ -4,7 +4,7 @@
   display: inline-block;
 }
 
-.field_with_errors .form-control {
+.field_with_errors .form-group {
   border-color: $red-boder-input;
   padding-right: calc(1.5em + 0.75rem);
   background-repeat: no-repeat;
@@ -14,5 +14,10 @@
 
 .boring-text::after {
   content: "*";
+  color: $red-boring-text;
+}
+
+.error-feedback {
+  font-size: 80%;
   color: $red-boring-text;
 }
