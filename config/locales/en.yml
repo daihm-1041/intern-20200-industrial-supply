@@ -438,3 +438,13 @@ en:
       total_amount: total_amount
       address_receiver: address_receiver
       phone_receiver: phone_receiver
+    send_notification_to_admin:
+      notifycation: notifycation
+      name: name
+      order: order
+      quantity: quantity
+      total_amount: total_amount
+      address_receiver: address_receiver
+      phone_receiver: phone_receiver
+    errors_order:
+      fail_order: fail_order

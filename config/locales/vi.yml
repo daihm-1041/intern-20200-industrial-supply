@@ -438,3 +438,13 @@ vi:
       total_amount: tổng tiền
       address_receiver: địa chỉ nhận hàng
       phone_receiver: số điện thoại
+    send_notification_to_admin:
+      notifycation: xin chào bạn có đơn hàng mới
+      name: tên người nhận
+      order: mã đơn hàng
+      quantity: số lượng
+      total_amount: tổng tiền
+      address_receiver: địa chỉ nhận hàng
+      phone_receiver: số điện thoại
+    errors_order:
+      fail_order: Đơn hàng của bạn bị thất bại

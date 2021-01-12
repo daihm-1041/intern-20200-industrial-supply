@@ -31,6 +31,10 @@ class User < ApplicationRecord
 
   enum role: {user: 0, admin: 1}, _prefix: true
 
+  scope :filter_by_role, (lambda do |r|
+    where(role: r) if r.present?
+  end)
+
   class << self
     def from_omniauth auth
       where(email: auth.info.email)
